@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FarmConnect</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f8f3;
+            color: #222;
+        }
+
+        /* Navigation Bar */
+
+        nav {
+            background-color: #1b5e20;
+            padding: 18px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        /* Hero Section */
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: #dcedc8;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            color: #1b5e20;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #2e7d32;
+            color: white;
+            padding: 14px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+/* Farmer Form */
+
+.form-section {
+    background-color: white;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.form-section h2 {
+    color: #2e7d32;
+    margin-bottom: 25px;
+}
+
+.form-section input {
+    width: 100%;
+    padding: 14px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.form-section button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-section button:hover {
+    background-color: #1b5e20;
+}
+        /* Cards */
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 60px 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: white;
+            width: 300px;
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            color: #2e7d32;
+        }
+
+        .card p {
+            margin-bottom: 20px;
+        }
+/* Crop Listings */
+
+.listings {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.listings h2 {
+    color: #2e7d32;
+    margin-bottom: 25px;
+}
+
+.crop-card {
+    background-color: white;
+    padding: 25px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.crop-card h3 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.crop-card p {
+    margin: 6px 0;
+}
+        /* Footer */
+
+        footer {
+            text-align: center;
+            background-color: #1b5e20;
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <h2>🌾 FarmConnect</h2>
+
+        <div>
+            <a href="#">Home</a>
+            <a href="#">Farmers</a>
+            <a href="#">Buyers</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <h1>🌾 from farm to market</h1>
+
+        <p>
+            Buy and sell agricultural products directly.
+        </p>
+
+        <a href="#" class="button">
+            Get Started
+        </a>
+
+    </section>
+
+
+   <!-- Farmer Crop Form -->
+
+<section class="form-section">
+
+    <h2>👨‍🌾 Add Your Crop</h2>
+
+    <form id="cropForm">
+
+        <input
+            type="text"
+            id="cropName"
+            placeholder="Enter crop name"
+            required
+        >
+
+        <input
+            type="number"
+            id="quantity"
+            placeholder="Quantity in kg"
+            required
+        >
+
+        <input
+            type="number"
+            id="price"
+            placeholder="Expected price per kg"
+            required
+        >
+
+        <input
+            type="text"
+            id="location"
+            placeholder="Enter your location"
+            required
+        >
+
+        <input
+            type="tel"
+            id="contact"
+            placeholder="Contact number"
+            required
+        >
+
+        <button type="submit">
+            Add Crop
+        </button>
+
+    </form>
+
+</section> <!-- Cards -->
+
+    <section class="cards">
+
+        <div class="card">
+
+            <h2>👨‍🌾 For Farmers</h2>
+
+            <p>
+                List your crops and reach potential buyers directly.
+            </p>
+
+            <a href="#" class="button">
+                Add Your Crop
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>🛒 For Buyers</h2>
+
+            <p>
+                Find farmers and discover available agricultural products.
+            </p>
+
+            <a href="#" class="button">
+                Find Crops
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 FarmConnect | Hacktoberfest Practice Project
+        </p>
+
+    </footer>
+    /* Buyer Search */
+
+.search-box {
+    background-color: white;
+    max-width: 600px;
+    margin: 50px auto 30px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.search-box h2 {
+    color: #2e7d32;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+<!-- Crop Listings -->
+
+<section class="listings">
+<!-- Buyer Search -->
+
+<div class="search-box">
+
+    <h2>🔍 Find Crops</h2>
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search for a crop..."
+    >
+
+</div>
+    <h2>🌾 Available Crops</h2>
+
+    <div id="cropList">
+
+        <p id="noCrops">
+            No crops added yet.
+        </p>
+
+    </div>
+
+</section>
+<script>
+const cropForm = document.getElementById("cropForm");
+
+const cropList = document.getElementById("cropList");
+
+const searchInput = document.getElementById("searchInput");
+
+
+// Load saved crops
+
+let crops = JSON.parse(localStorage.getItem("crops")) || [];
+
+
+// Display crops
+
+function displayCrops(cropsToDisplay) {
+
+    cropList.innerHTML = "";
+
+
+    if (cropsToDisplay.length === 0) {
+
+        cropList.innerHTML =
+            "<p>No crops found.</p>";
+
+        return;
+
+    }
+
+
+    cropsToDisplay.forEach(function(crop) {
+
+        const cropCard =
+            document.createElement("div");
+
+        cropCard.className = "crop-card";
+
+
+        cropCard.innerHTML = `
+
+            <h3>🌾 ${crop.name}</h3>
+
+            <p>
+                <strong>Quantity:</strong>
+                ${crop.quantity} kg
+            </p>
+
+            <p>
+                <strong>Price:</strong>
+                ₹${crop.price} per kg
+            </p>
+
+            <p>
+                <strong>Location:</strong>
+                ${crop.location}
+            </p>
+
+            <p>
+                <strong>Contact:</strong>
+                ${crop.contact}
+            </p>
+
+        `;
+
+
+        cropList.appendChild(cropCard);
+
+    });
+
+}
+
+
+// Add new crop
+
+cropForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+
+    const crop = {
+
+        name:
+            document.getElementById("cropName").value,
+
+        quantity:
+            document.getElementById("quantity").value,
+
+        price:
+            document.getElementById("price").value,
+
+        location:
+            document.getElementById("location").value,
+
+        contact:
+            document.getElementById("contact").value
+
+    };
+
+
+    crops.push(crop);
+
+
+    localStorage.setItem(
+        "crops",
+        JSON.stringify(crops)
+    );
+
+
+    displayCrops(crops);
+
+
+    cropForm.reset();
+
+
+    alert("✅ Crop saved successfully!");
+
+});
+
+
+// Search crops
+
+searchInput.addEventListener("input", function() {
+
+    const searchText =
+        searchInput.value.toLowerCase();
+
+
+    const filteredCrops =
+        crops.filter(function(crop) {
+
+            return crop.name
+                .toLowerCase()
+                .includes(searchText);
+
+        });
+
+
+    displayCrops(filteredCrops);
+
+});
+
+
+// Display saved crops when page opens
+
+displayCrops(crops);
+  
+
+  
+</script> 
+</body>
+
+</html>
